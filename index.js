@@ -21,21 +21,19 @@ function send() {
 }
 
 function sendReally(url, payload) {
-    if (xhr) {
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "application/dmr-encoded");
-        xhr.setRequestHeader("Accept", "application/dmr-encoded");
-        xhr.withCredentials = true;
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    document.getElementById("result").innerHTML = "Received at " + new Date().getTime() + ": " + xhr.responseText;
-                }
-                else {
-                    alert("An error occured. Status: " + xhr.status);
-                }
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/dmr-encoded");
+    xhr.setRequestHeader("Accept", "application/dmr-encoded");
+    xhr.withCredentials = true;
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                document.getElementById("result").innerHTML = "Received at " + new Date().getTime() + ": " + xhr.responseText;
             }
-        };
-        xhr.send(payload);
-    }
+            else {
+                alert("An error occured. Status: " + xhr.status);
+            }
+        }
+    };
+    xhr.send(payload);
 }
