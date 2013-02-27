@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Test</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <h1>CORS Test</h1>
+
+    <p class="mb">Clicking the button below will send a CORS enabled XMLHttpRequest from this site to the given
+        management interface of the JBoss AS. Digest Authentication is handled as expected!
+    </p>
+
+    <ul class="form mb">
+        <li>
+            <label>JBoss Management URL:</label>
+            <input id="url" name="url" value="http://127.0.0.1:9990/management" type="text"/>
+        </li>
+        <li>
+            <label for="payload">Payload:</label>
+
+            <div style="width: 100%">
+                <textarea id="payload">bwAAAAMACW9wZXJhdGlvbnMADnJlYWQtYXR0cmlidXRlAARuYW1lcwAMcHJvY2Vzcy10eXBlAAdhZGRyZXNzbAAAAAA=</textarea>
+            </div>
+        </li>
+        <li>
+            <button onclick="send()">Send</button>
+        </li>
+    </ul>
+
+    <p>Result:</p>
+
+    <div id="result">n/a</div>
+</div>
+
+<iframe id="safari-authentication-workaround" src="javascript:void(0)" style="display: none"></iframe>
+</body>
+</html>
