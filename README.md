@@ -2,7 +2,7 @@
 
 ### Prerequiste
 
-Install node.js (http://nodejs.org/) and the launchpad dependencies:
+Install node.js (http://nodejs.org/) and the dependencies:
 
     npm install
 
