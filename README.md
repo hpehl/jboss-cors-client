@@ -8,7 +8,7 @@ Install node.js (http://nodejs.org/) and the dependencies:
 
 ### Launching
 
-- Start an CORS enabled JBoss AS. See https://github.com/hpehl/jboss-as/commits/cors for the required modifications.
+- Start a CORS enabled JBoss AS. See https://github.com/hpehl/jboss-as/commits/cors for the required modifications.
 - Start the test client
 
         node server.js
